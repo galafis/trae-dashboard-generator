@@ -1,6 +1,6 @@
 import { eq } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, users } from "../drizzle/schema";
+import { InsertUser, users, InsertDataset, datasets, InsertDashboard, dashboards } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
 let _db: ReturnType<typeof drizzle> | null = null;
@@ -89,4 +89,73 @@ export async function getUser(openId: string) {
   return result.length > 0 ? result[0] : undefined;
 }
 
-// TODO: add feature queries here as your schema grows.
+export async function createDataset(dataset: InsertDataset) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  
+  const result = await db.insert(datasets).values(dataset);
+  return result;
+}
+
+export async function getDatasets(userId: number) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  
+  const result = await db.select().from(datasets).where(eq(datasets.userId, userId));
+  return result;
+}
+
+export async function getDatasetById(id: number) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  
+  const result = await db.select().from(datasets).where(eq(datasets.id, id)).limit(1);
+  return result.length > 0 ? result[0] : undefined;
+}
+
+export async function deleteDataset(id: number) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  
+  await db.delete(datasets).where(eq(datasets.id, id));
+}
+
+export async function createDashboard(dashboard: InsertDashboard) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  
+  const result = await db.insert(dashboards).values(dashboard);
+  return result;
+}
+
+export async function getDashboards(userId: number) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  
+  const result = await db.select().from(dashboards).where(eq(dashboards.userId, userId));
+  return result;
+}
+
+export async function getDashboardById(id: number) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  
+  const result = await db.select().from(dashboards).where(eq(dashboards.id, id)).limit(1);
+  return result.length > 0 ? result[0] : undefined;
+}
+
+export async function updateDashboard(id: number, config: any) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  
+  const dashboardsTable = dashboards;
+  await db.update(dashboardsTable).set({ config, updatedAt: new Date() }).where(eq(dashboardsTable.id, id));
+}
+
+export async function deleteDashboard(id: number) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  
+  const dashboardsTable = dashboards;
+  await db.delete(dashboardsTable).where(eq(dashboardsTable.id, id));
+}

@@ -1,0 +1,50 @@
+graph TB
+    User["👤 User"]
+    TRAE["🤖 TRAE.ai IDE"]
+    Dev["💻 Developer"]
+    
+    subgraph Frontend["Frontend (React + Vite)"]
+        Home["Home Page"]
+        Upload["CSV Upload"]
+        Builder["Dashboard Builder"]
+        Viewer["Dashboard Viewer"]
+    end
+    
+    subgraph Backend["Backend (Express + tRPC)"]
+        Auth["Authentication"]
+        DatasetAPI["Dataset API"]
+        DashboardAPI["Dashboard API"]
+        Storage["S3 Storage"]
+    end
+    
+    subgraph Database["Database (MySQL)"]
+        Users["Users Table"]
+        Datasets["Datasets Table"]
+        Dashboards["Dashboards Table"]
+    end
+    
+    User -->|Logs In| Home
+    Home -->|Upload CSV| Upload
+    Upload -->|Parse & Store| DatasetAPI
+    DatasetAPI -->|Save Metadata| Datasets
+    DatasetAPI -->|Upload File| Storage
+    
+    Home -->|Create Dashboard| Builder
+    Builder -->|Configure Charts| DashboardAPI
+    DashboardAPI -->|Save Config| Dashboards
+    
+    Dashboards -->|Fetch| Viewer
+    Viewer -->|Display Charts| User
+    
+    TRAE -->|Accelerates| Dev
+    Dev -->|Builds| Frontend
+    Dev -->|Builds| Backend
+    
+    Auth -->|Verify| Users
+    DatasetAPI -->|Link User| Users
+    DashboardAPI -->|Link User| Users
+    
+    style TRAE fill:#4f46e5,color:#fff
+    style Frontend fill:#7c3aed,color:#fff
+    style Backend fill:#db2777,color:#fff
+    style Database fill:#ea580c,color:#fff
