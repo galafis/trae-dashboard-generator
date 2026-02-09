@@ -133,7 +133,7 @@ TRAE.ai accelerated development at every stage:
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/trae-dashboard-generator.git
+git clone https://github.com/galafis/trae-dashboard-generator.git
 cd trae-dashboard-generator
 ```
 
