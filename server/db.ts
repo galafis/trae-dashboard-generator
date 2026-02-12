@@ -1,7 +1,6 @@
 import { eq } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, users, InsertDataset, datasets, InsertDashboard, dashboards } from "../drizzle/schema";
-import { ENV } from './_core/env';
+import { InsertUser, users, InsertDataset, datasets, InsertDashboard, dashboards, type DashboardConfig } from "../drizzle/schema";
 
 let _db: ReturnType<typeof drizzle> | null = null;
 
@@ -144,7 +143,7 @@ export async function getDashboardById(id: number) {
   return result.length > 0 ? result[0] : undefined;
 }
 
-export async function updateDashboard(id: number, config: any) {
+export async function updateDashboard(id: number, config: DashboardConfig) {
   const db = await getDb();
   if (!db) throw new Error("Database not available");
   

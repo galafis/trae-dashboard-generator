@@ -22,7 +22,7 @@ export default function Home() {
               <h1 className="text-4xl font-bold text-gray-900">{APP_TITLE}</h1>
             </div>
             <p className="text-xl text-gray-600 mb-2">Powered by TRAE.ai</p>
-            <p className="text-gray-600">Transform your data into stunning interactive dashboards in seconds</p>
+            <p className="text-gray-600">Transform your data into interactive dashboards in seconds</p>
           </div>
 
           {/* Features Grid */}

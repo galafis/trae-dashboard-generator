@@ -2,7 +2,7 @@
 
 ![TRAE Dashboard Generator Banner](./banner.png)
 
-> **Transform your data into stunning interactive dashboards in seconds with TRAE.ai-powered code generation**
+> **Build interactive dashboards from CSV data using TRAE.ai-assisted code generation**
 
 ---
 
@@ -17,17 +17,17 @@
 
 ## 🚀 Overview
 
-**TRAE Dashboard Generator** is an innovative web application that demonstrates the power of **TRAE.ai** in accelerating full-stack development. This project showcases how TRAE.ai's intelligent code generation capabilities can be leveraged to build complex data visualization applications with minimal manual coding.
+**TRAE Dashboard Generator** is a web application that demonstrates **TRAE.ai** in a full-stack development context. The project uses TRAE.ai's code generation to build a data visualization app with less manual coding.
 
 The application allows users to:
-- Upload CSV files effortlessly
+- Upload CSV files with ease
 - Configure interactive dashboards with multiple chart types
 - Generate professional visualizations automatically
 - Manage datasets and dashboards with a modern, intuitive interface
 
 ### Why TRAE.ai?
 
-TRAE.ai is an AI-powered IDE that revolutionizes how developers write code. By utilizing TRAE.ai in this project, we've demonstrated:
+TRAE.ai is an AI-powered IDE that assists with code generation. In this project, it was used for:
 
 1. **Rapid Prototyping**: Code generation for complex features in minutes instead of hours
 2. **Type Safety**: Full end-to-end type inference across frontend and backend
@@ -174,7 +174,7 @@ http://localhost:3000
 - Generated complete tRPC procedures with input validation
 - Automatically created Zod schemas for request/response types
 - Implemented error handling and authentication middleware
-- Result: 80% faster API development
+- Result: Faster API development
 
 ### 2. React Component Generation
 **Challenge**: Building interactive UI components with proper state management
@@ -340,7 +340,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - **React** and **Vite** for modern frontend development
 - **Express.js** and **tRPC** for type-safe backend APIs
 - **Tailwind CSS** for rapid UI development
-- **Recharts** for beautiful data visualizations
+- **Recharts** for data visualization
 
 ---
 
@@ -359,17 +359,17 @@ For issues, questions, or suggestions:
 
 ## 🚀 Visão Geral
 
-**TRAE Dashboard Generator** é uma aplicação web inovadora que demonstra o poder do **TRAE.ai** na aceleração do desenvolvimento full-stack. Este projeto showcasa como as capacidades de geração de código inteligente do TRAE.ai podem ser aproveitadas para construir aplicações complexas de visualização de dados com codificação manual mínima.
+**TRAE Dashboard Generator** é uma aplicação web que demonstra o uso do **TRAE.ai** no desenvolvimento full-stack. O projeto utiliza a geração de código do TRAE.ai para construir uma aplicação de visualização de dados com menos codificação manual.
 
 A aplicação permite que os usuários:
-- Façam upload de arquivos CSV sem esforço
+- Façam upload de arquivos CSV com facilidade
 - Configurem dashboards interativos com múltiplos tipos de gráficos
 - Gerem visualizações profissionais automaticamente
 - Gerenciem datasets e dashboards com uma interface moderna e intuitiva
 
 ### Por que TRAE.ai?
 
-TRAE.ai é uma IDE alimentada por IA que revoluciona a forma como os desenvolvedores escrevem código. Ao utilizar TRAE.ai neste projeto, demonstramos:
+TRAE.ai é uma IDE com assistência de IA para geração de código. Neste projeto, foi utilizada para:
 
 1. **Prototipagem Rápida**: Geração de código para recursos complexos em minutos em vez de horas
 2. **Segurança de Tipos**: Inferência de tipos completa de ponta a ponta entre frontend e backend
@@ -475,7 +475,7 @@ TRAE.ai acelerou o desenvolvimento em cada estágio:
 
 1. **Clone o repositório**
 ```bash
-git clone https://github.com/seuusuario/trae-dashboard-generator.git
+git clone https://github.com/galafis/trae-dashboard-generator.git
 cd trae-dashboard-generator
 ```
 
@@ -516,7 +516,7 @@ http://localhost:3000
 - Gerou procedimentos tRPC completos com validação de entrada
 - Criou automaticamente schemas Zod para tipos de requisição/resposta
 - Implementou tratamento de erros e middleware de autenticação
-- Resultado: Desenvolvimento de API 80% mais rápido
+- Resultado: Desenvolvimento de API mais ágil
 
 ### 2. Geração de Componentes React
 **Desafio**: Construir componentes de UI interativos com gerenciamento de estado apropriado
@@ -682,7 +682,7 @@ Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE para d
 - **React** e **Vite** para desenvolvimento frontend moderno
 - **Express.js** e **tRPC** para APIs backend type-safe
 - **Tailwind CSS** para desenvolvimento rápido de UI
-- **Recharts** para visualizações de dados bonitas
+- **Recharts** para visualização de dados
 
 ---
 
@@ -695,5 +695,5 @@ Para problemas, dúvidas ou sugestões:
 
 ---
 
-**Built with ❤️ and TRAE.ai**
+**Author:** Gabriel Demetrios Lafis
 
